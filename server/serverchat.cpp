@@ -149,7 +149,8 @@ int ServerChat::addMessage(const std::string &from, const std::string &to, const
    //Отправляем сигнал успешного добавления
    server_->send(1);
 
-   std::string str = from + " " + to + " " + text;
+   Datetime now;
+   std::string str = "[" + now.getStrAll() + "] " + from + " " + to + " " + text;
    //Записать сообщение с помощью Logger
    logger_.writeLine(str);
 
