@@ -25,7 +25,7 @@ class ServerChat{
    
 public:
    //Конструктор по умолчанию
-   ServerChat() :users_(), amountErrors_(0), timing_(), config_("server.json") {
+   ServerChat() :users_(), amountErrors_(0), timing_(), config_("server.json"), logger_() {
       //Читаем конфигурации
       config_.readConfig();
       
